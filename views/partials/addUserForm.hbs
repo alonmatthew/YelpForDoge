@@ -1,0 +1,45 @@
+<div id="addUserFromDiv">
+
+  <h2>adding customer</h2>
+  {{#if errors}}
+    <ul>
+      {{#each errors}}
+        <li>{{this.msg}}</li>
+      {{/each}}
+    </ul>
+  {{/if}}
+
+  <form method="POST" action="/users/add">
+    <label>Username</label>
+    <br>
+    <input type="text" name="userName">
+    <br>
+    <label>First Name</label>
+    <br>
+    <input type="text" name="firstName">
+    <br>
+    <label>Email</label>
+    <br>
+    <input type="text" name="email">
+    <br>
+    <br>
+    {{!-- submit button --}}
+    <input type="submit" value="Submit">
+  </form>
+
+</div>
+
+
+<div>
+  <h2> customers render for now</h2>
+
+  <ul>
+    {{#each users}}
+      <li>
+        {{this.first_name}}
+        {{this.last_name}}
+      </li>
+    {{/each}}
+  </ul>
+
+</div>
