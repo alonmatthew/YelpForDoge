@@ -1,4 +1,29 @@
 {{> header }}
 <h1>Hello From homepage</h1>
+
+<div id="addUserFromDiv">
+
+  <h2>adding customer</h2>
+
+  <form method="POST" action="/users/add">
+    <label>First Name</label>
+    <br>
+    <input type="text" name="first_name">
+    <br>
+    <label>Last Name</label>
+    <br>
+    <input type="text" name="last_name">
+    <br>
+    <label>Email</label>
+    <br>
+    <input type="text" name="email">
+    <br>
+    <br>
+    {{!-- submit button --}}
+    <input type="submit" value="Submit">
+  </form>
+
+</div>
+
 {{> addUserForm }}
 {{> footer }}

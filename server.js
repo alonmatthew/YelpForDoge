@@ -1,7 +1,6 @@
 //Server JavaScript
 var express = require("express");
 var app = express();
-
 var logger = require("morgan");
 var path = require("path");
 var bodyParser = require("body-parser");
@@ -19,13 +18,11 @@ app.use(express.static(path.join(__dirname, "public")));
 // Database
 var mongoose = require("mongoose");
 
-
 // Middleware
-app.use(router);
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.urlencoded({extended:true}));
 app.use(logger("dev"));
-
+app.use(router);
 
 //View Engine
 app.set("view engine", "hbs");
@@ -53,7 +50,6 @@ app.use(expressValidator({
     };
   }
 }));
-
 
 // listening on localhost 3000
 app.listen(3000, function(req,res, err){

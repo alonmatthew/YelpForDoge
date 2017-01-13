@@ -1,22 +1,15 @@
-<h2>adding customer</h2>
-
-<form method="POST" action"/users/add">
-  <label>First Name</label>
-  <input type="text" name="first_name">
-  <label>Last Name<Label>
-  <input type="text" name="last_name">
-  <label>Email</label>
-  <input type="text" name="email">
-  <input type="submit" value="Submit">
-</form>
 
 
+<div>
+  <h2> customers render for now</h2>
 
-<ul>
-  {{#each users}}
-    <li>
-      {{this.first_name}}
-      {{this.last_name}}
-    </li>
-  {{/each}}
-</ul>
+  <ul>
+    {{#each users}}
+      <li>
+        {{this.first_name}}
+        {{this.last_name}}
+      </li>
+    {{/each}}
+  </ul>
+
+</div>

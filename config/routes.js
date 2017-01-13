@@ -1,5 +1,6 @@
 var express = require("express");
 var router = express.Router();
+var bodyParser = require('body-parser');
 
 // index page for now
 router.get("/", function(req,res){
@@ -41,9 +42,15 @@ var users = [
 
 
 // Adding User with addUserForm
-router.post("/users/add", function(req,res){
-  console.log("submitted")
-})
+router.route("/users/add")
+  .post(function(req, res){
+    var newUser = {
+      first_name: req.body.first_name,
+      last_name: req.body.last_name,
+      email: req.body.email
+    }
+    console.log(newUser);
+});
 
 
 
