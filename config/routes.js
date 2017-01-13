@@ -24,7 +24,7 @@ router.route("/api/users")
 // About page
 router.get("/about", function(req,res){
   res.status(200);
-  res.render("about");
+  res.render("pages/about");
 })
 
 
