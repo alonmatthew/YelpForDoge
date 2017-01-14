@@ -8,8 +8,10 @@ var cookieParser = require("cookie-parser");
 var methodOverride = require("method-override");
 var router = require("./config/routes.js");
 var session = require("express-session");
-// var passport = require("passport");
+var passport = require("passport");
+var passportLocal = require("passport-local");
 // var passportFacebook = require("passport-facebook");
+
 
 // importing models
 var User = require("./models/user.js");
